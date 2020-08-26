@@ -11,5 +11,10 @@ function drag(id){
             el.style.left = ev.pageX - disX + 'px';
             el.style.top = ev.pageY - disY + 'px';
         }
+        el.onmouseup = function(){
+            el.onmousemove = null;
+            el.onmouseup = null;
+        }
+        return false;
     }
 }
